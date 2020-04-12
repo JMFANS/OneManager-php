@@ -3,7 +3,7 @@
 $exts['img'] = ['ico', 'bmp', 'gif', 'jpg', 'jpeg', 'jpe', 'jfif', 'tif', 'tiff', 'png', 'heic', 'webp'];
 $exts['music'] = ['mp3', 'wma', 'flac', 'wav', 'ogg'];
 $exts['office'] = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'];
-$exts['txt'] = ['txt', 'bat', 'sh', 'php', 'asp', 'js', 'json', 'html', 'c', 'md', 'py'];
+$exts['txt'] = ['txt', 'bat', 'sh', 'php', 'asp', 'js', 'json', 'html', 'c', 'md', 'py', 'omf'];
 $exts['video'] = ['mp4', 'webm', 'mkv', 'mov', 'flv', 'blv', 'avi', 'wmv', 'm3u8'];
 $exts['zip'] = ['zip', 'rar', '7z', 'gz', 'tar'];
 
@@ -332,6 +332,10 @@ $constStr = [
         'ko-kr' => '모든 다운로드 링크 복사',
         'fa' => 'کپی از تمام لینک ها',
     ],
+    'Search' => [
+        'en-us' => 'Search',
+        'zh-cn' => '搜索',
+    ],
     'EditTime' => [
         'en-us' => 'EditTime',
         'zh-cn' => '修改时间',
@@ -401,6 +405,14 @@ $constStr = [
         'ja' => 'アップロードする',
         'ko-kr' => '업로드',
         'fa' => 'آپلود',
+    ],
+    'UploadFile' => [
+        'en-us' => 'Upload File(s)',
+        'zh-cn' => '上传文件',
+    ],
+    'UploadFolder' => [
+        'en-us' => 'Upload Folder',
+        'zh-cn' => '上传文件夹',
     ],
     'FileSelected' => [
         'en-us' => 'Select File',
@@ -633,6 +645,10 @@ $constStr = [
         'ko-kr' => '중국 Onedrive',
         'fa' => 'Onedrive در چین',
     ],
+    'UseShareLink' => [
+        'en-us' => 'Share a folder in Onedrive (enable EDIT for everyone), input the link url below.',
+        'zh-cn' => '对一个Onedrive文件夹共享，允许所有人编辑，然后将共享链接填在下方',
+    ],
     'CustomIdSecret' => [
         'en-us' => 'Use custom client id & secret',
         'zh-cn' => '自己申请应用ID与机密',
@@ -725,5 +741,13 @@ $constStr = [
         'ja' => 'キャッシュを再構築',
         'ko-kr' => '캐시 플러시',
         'fa' => 'رفرش cache',
+    ],
+    'VPSnotupdate' => [
+        'en-us' => 'In VPS can not update by a click! run update.sh',
+        'zh-cn' => '在VPS中不能一键更新，可以运行update.sh',
+    ],
+    'QueryBranchs' => [
+        'en-us' => 'Query Branchs',
+        'zh-cn' => '查询分支',
     ],
 ];

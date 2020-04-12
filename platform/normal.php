@@ -2,6 +2,7 @@
 
 function getpath()
 {
+    $_SERVER['firstacceptlanguage'] = strtolower(splitfirst(splitfirst($_SERVER['HTTP_ACCEPT_LANGUAGE'],';')[0],',')[0]);
     $_SERVER['base_path'] = path_format(substr($_SERVER['SCRIPT_NAME'], 0, -10) . '/');
     $p = strpos($_SERVER['REQUEST_URI'],'?');
     if ($p>0) $path = substr($_SERVER['REQUEST_URI'], 0, $p);
@@ -119,6 +120,7 @@ function install()
         if ($_POST['admin']!='') {
             $tmp['admin'] = $_POST['admin'];
             $tmp['language'] = $_COOKIE['language'];
+            $tmp['timezone'] = $_COOKIE['timezone'];
             $response = setConfig($tmp);
             if (api_error($response)) {
                 $html = api_error_msg($response);
@@ -148,6 +150,12 @@ function install()
     </form>
 </div>
     <script>
+        var nowtime= new Date();
+        var timezone = 0-nowtime.getTimezoneOffset()/60;
+        var expd = new Date();
+        expd.setTime(expd.getTime()+(2*60*60*1000));
+        var expires = "expires="+expd.toGMTString();
+        document.cookie="timezone="+timezone+"; path=/; "+expires;
         function notnull(t)
         {
             if (t.admin.value==\'\') {
